@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <form>
+    Nome: <input type="text" name="nome"> <br>
+    Senha: <input type="password" name="senha" maxlength="8"> <br>
+    Pesquisar: <input type="search" name="pesquisa"> <br>
+    Escolha o Horário: <input type="time" name="usr_horario"> <br>
+    Link do Seu WebSite: <input type="url"> <br>
+    Escolha uma Semana: <input type="week" name="semana"> <br><br>
+    <textarea> Área de texto com um texto inicial dentro</textarea> <br>
+    
+
+    <p>Defina seu nível de satisfação: <br>
+    Pouco Satisfeito <input type="range" name="satisfacao" min="0" max="10"> Muito Satisfeito </p>
+
+    <p>Qual sua idade ?</p>
+    <input type="radio" name="idade" value="18_22"> 18 a 22 <br>
+    <input type="radio" name="idade" value="23_30"> 23 a 30 <br>
+    <input type="radio" name="idade" value="mais31"> Acima de 30 <br><br>
+
+    Quantidade (entre 1 e 5): <input type="number" name="quantidade" min="1" max="5"> <br>
+    <input type="checkbox" name="veiculo1" value="bicicleta"> Eu tenho uma bicicleta <br>
+    <input type="checkbox" name="veiculo2" value="carro"> Eu tenho um carro <br>
+    <input type="checkbox" name="veiculo3" value="moto"> Eu tenho uma moto <br>
+
+    Escolha uma Marca de Carro: <br>
+    <select name="cars" id="cars">
+        <option value="Fiat">Fiat</option>
+        <option value="Honda">Honda</option>
+        <option value="Hyundai">Hyundaio</option>
+        <option value="Volvo">Volvo</option>
+    </select> <br><br>
+
+    <input type="reset" value="Limpar"> <br>
+    <input type="submit" value="Enviar Formulário"> <br>
+    </form>
+</body>
+</html>

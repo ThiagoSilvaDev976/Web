@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset</title>
+</head>
+<body> 
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <table>
+                <tr>
+                    <td>Nome:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Idade:</td>
+                    <td><input type="number" min="0" max="120"></td>
+                </tr>
+                <tr></tr>
+                    <td>Data de Nascimento:</td>
+                    <td><input type="date"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+<body> 
+    <form>
+        <fieldset>
+            <legend>Dados Profissionais</legend>
+            <table>
+                <tr>
+                    <td>Escolaridade:</td>
+                    <td><select>
+                        <option value="Emed">Ensino Médio</option>
+                        <option value="Esup">Ensino Superior</option>
+                        <option value="Mest">Mestrado</option>
+                        <option value="Doct">Doutorado</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email"id="email" name="email"></td>
+                </tr>
+                <tr></tr>
+                    <td>Tem Experiência em TI:</td>
+                    <td><input type="radio" value="Sim">Sim<input type="radio" value="Não">Não</td>
+                </tr>
+                <tr>
+                    <td>Disponilidade:</td>
+                    <td><input type="checkbox" name="Disp1" id="Manhã">Manhã<input type="checkbox" name="Disp2" id="Tarde">Tarde<input type="checkbox"name="Disp3" id="Noite">Noite</td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
