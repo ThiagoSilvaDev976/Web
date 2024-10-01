@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela+CSS</title>
+    <style> /*Estilização do texto*/
+        table,th,td { border: 1px solid; /*Define a espessura da borda da tabela*/
+            padding: 5px; /*Cria um espaço ao redor do elemento em relação a uma borda*/
+            border-collapse: collapse; /*Une as bordas das células da tabela*/
+            text-align: center;} /*Alinha o Texto das Células da Tabela*/
+        table {width: 90%; /*Define o tamanho da tabela em relação a página*/
+            margin-left: 5%; /*distancia da margem esquerda da tabela e a borda da página*/
+            margin-right: 5%;/*distancia da margem direita da tabela e a borda da página*/
+            margin-top: 5%;}/*distancia do topo da tabela e a borda da página*/
+        tr:nth-child(even) /*: define uma ação, nessa linha: cria linhas zebradas na tabela*/
+        {background-color: lightgray;} /*Cor da parte zebrada*/
+        tr:hover /*Ao passar o mouse pelas células, elas mudam de cor*/
+        {background-color: darkblue; color: gold;} /*Cor mudada ao passar o mouse*/
+        th{background-color: gold;/*Muda a Cor da Caixa de Texto*/
+            color:darkblue; /*Muda a Cor do Texto*/
+            font-size: x-large;} /*Muda o Tamanho da Fonte*/
+        .titulo{font-weight: bolder; /*Torna o texto Negrito*/ /*".titulo" chama uma classe do texto*/
+            text-transform: uppercase;} /*Torna o texto Caixa Alta*/
+        img{width:50px;/*Define Tamanho da Imagem, pode ser px ou %*/
+            vertical-align: middle;} /*Alinha a Imagem na Célula*/
+    </style>
 </head>
 <body>
     <table>
@@ -14,16 +35,16 @@
         </thead>
         <tbody>
             <tr>
-                <td>Colocação</td>
-                <td>País</td>
-                <td>Ouro</td>
-                <td>Prata</td>
-                <td>Bronze</td>
-                <td>Total</td>
+                <td class="titulo">Colocação</td> <!--Class="titulo", distingue esse "td" dos demais-->
+                <td class="titulo">País</td>
+                <td class="titulo">Ouro</td>
+                <td class="titulo">Prata</td>
+                <td class="titulo">Bronze</td>
+                <td class="titulo">Total</td>
             </tr>
             <tr>
                 <td>1</td>
-                <td></td>
+                <td><img src="./img/bChina.png"</td>
                 <td>94</td>
                 <td>76</td>
                 <td>50</td>
@@ -31,7 +52,7 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td></td>
+                <td><img src="./img/bReino.png" ></td>
                 <td>49</td>
                 <td>44</td>
                 <td>31</td>
@@ -39,7 +60,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td></td>
+                <td><img src="./img/bEstUni.png"></td>
                 <td>36</td>
                 <td>42</td>
                 <td>27</td>
@@ -47,11 +68,19 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td></td>
+                <td><img src="./img/bHolan.jpg"></td>
                 <td>27</td>
                 <td>17</td>
                 <td>12</td>
                 <td>56</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><img src="./img/bBraza.jpg"></td>
+                <td>25</td>
+                <td>26</td>
+                <td>38</td>
+                <td>89</td>
             </tr>
         </tbody>
     </table>
