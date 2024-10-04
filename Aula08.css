@@ -3,8 +3,8 @@ div{margin-left: 5%;margin-right: 5%;}
 h2{
     text-align: center;
     text-decoration-line: underline;
-    co/lor: lightgreen; 
-    text-trans/form: uppercase;}
+    color: lightgreen; 
+    text-transform: uppercase;}
 
 input,select{
     width: 100%;
@@ -24,9 +24,9 @@ td{
     border-color: rgb(217, 214, 214);
     border-style: solid;
 }
-fieldset{ margin-bottom: 10px; co/lor: white; }
+fieldset{ margin-bottom: 10px; color: white;}
 
-bo/dy{background-image: url(./img/bckgVerde.png);background-attachment: cover;}
+body{background-image: url(./img/bckgVerde.png);background-attachment: cover;}
 
 input[type=submit]{
     background-color: lightgreen;
