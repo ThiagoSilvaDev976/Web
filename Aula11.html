@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style>
+        h3,h5{text-decoration: underline;}
+        h3{text-align: center;}
+        .card{background-color: rgb(7, 44, 44); color: gold;}
+        .list-group-item{color: black;}
+        .list-group-item:nth-child(even){background-color: rgb(190, 193, 193);}
+        .list-group-item:hover{background-color:gold; color: chartreuse;}
+    </style>
+</head>
+<body>
+    <h3>Classe "Card"</h3>
+    <h4>Exemplo da Aula:</h4>
+    <div class="row">
+        <div class="card col-xl-4 col-md-4 m-3 p-2"> <!--"m" signfica margem, qdo não especificado (l,r,t,b) será ao redor inteiro // "p" aqui, significa Padding (espaço em volta)-->
+            <img src="./img/bBraza.png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Bandeira do Brasil</h5>
+                <p class="card-text">-Brasil, mostra a sua cara ♪♬♪</p>
+                <a href="https://pt.wikipedia.org/wiki/Brasil" class="btn btn-primary">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+    <h3>Variações</h3>
+    <div class="row">
+        <div class="card col-xl-4 col-md-3 m-3 p-2">
+            <h5 class="card-header">Mago Negro</h5>
+            <img src="./cardMn.jpg" alt="">
+            <h6 class="card-title">[spellcaster/normal]</h6>
+            <p class="card-text">the ultimate mage in terms of attack/defense.</p>
+        </div>
+        <div class="card col-xl-4 col-md-3 m-3 p-2">
+            <h5 class="card-header">Citação</h5>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>Somente uma vida temos e ela logo passará. Somente o que fizermos para Cristo permanecerá</p>
+                <footer class="blockquote-footer">Melvin Huber</footer></blockquote>
+            </div>
+        </div>
+        <div class="card col-xl-4 col-md-3 m-3 p-2">
+            <h5 class="card-header">Frutas Cítricas</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Laranja</li>
+                <li class="list-group-item">Limão</li>
+                <li class="list-group-item">Tangerina</li>
+            </ul>
+            <div class="card-body">
+                <p class="card-text">Quando você pensa em frutas cítricas, certamente, uma das principais lembranças é o sabor azedinho e mais ácido do alimento. Mas você sabia que é justamente esse ácido que determina a sua classificação?</p>
+                <a href="https://content.paodeacucar.com/saudabilidade/frutas-citricas" class="btn btn-success">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
