@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas com Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style>
+        h3{text-decoration-line: underline;text-align: center;}
+        .bg-primary{color: white;}
+    </style>
+</head>
+<body>
+    <h3>Exemplo da Aula:</h3>
+<div class="container">
+    <table class="table table-success table-striped table-hover table-bordered"> <!--"striped" trona a tabela listrada, "hover" modif ao passar o mouse, "bordered" add linhas verticais-->
+        <thead class="table-warning text-center"><!--nome da classe + cod. da cor (primary,secondary,light,dark,danger,warning,success)-->
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>@exe</th>
+            </tr>
+        </thead>
+        <tbody class="text-center"> <!--centraliza os dados-->
+            <tr>
+                <td>1</td>
+                <td>Ana</td>
+                <td>Bolena</td>
+                <td>@ana</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ada</td>
+                <td>Wong</td>
+                <td>@ada</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Abe</td>
+                <td>Huber</td>
+                <td>@abe</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3>Atividades Práticas:</h3>
+<div class="container">
+    <table class="table table-secondary table-striped table-hover table-bordered text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Face ID</th>
+                <th>Nome</th>
+                <th>@login</th>
+                <th>senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="./img/tb01.jpg" width=50px"></td>
+                <td>Albuquerque</td>
+                <td>@admin01</td>
+                <td>123456</td>
+            </tr>
+            <tr class="bg-primary"> <!--"bg+cor" cor vívida-->
+                <td><img src="./img/tb02.jpg" width=50px"></td>
+                <td>Bandeira</td>
+                <td>@financeir0</td>
+                <td>110911</td>
+            </tr>
+            <tr class="table-primary"> <!--"table+cor" cor opaca-->
+                <td><img src="./img/tb03.jpg" width=50px"></td>
+                <td>Vasconcelos</td>
+                <td>@rhumanos</td>
+                <td>756534</td>
+            </tr>
+            <tr>
+                <td><img src="./img/tb04.jpg" width=50px"></td>
+                <td>Musashi</td>
+                <th scope="row">@dev404</td> <!--"scope row" destaque-->
+                <td>027749</td>
+            </tr>
+            <tr class="bg-warning">
+                <td><img src="./img/tb05.jpg" width=50px"></td>
+                <td>Pêra</td>
+                <td>@apr3nd1z</td>
+                <td>885544</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
