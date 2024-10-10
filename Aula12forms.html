@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms com Bootstrapt</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <style>
         form{background-color: orange;}
         .container{background-color: orange; color: darkblue;}
-        body{background-image: url(./img/bckgSenac.jpg); background-attachment: fixed;}
+        body{background-image: url(./img/bckgBlue.jpg); background-attachment: fixed;}
+        .bg-person{background-color: rgb(253, 178, 39);}
+        .nav-link{color: darkblue;}
     </style>
 </head>
 <body>
-    <nav class="navbar bg-light">
+    <nav class="navbar navbar-expand-lg bg-person ">
         <div class="container-fluid">
            <a href="#" class="navbar-brand">
-            <img src="./img/senaclogo.png" class="col-xl-2 col-md-2 col-sm-2">
+            <img src="./img/senaclogo.png" width="100">
            </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+                <li  class="nav-item active">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SERVIÇOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PLANOS</a>
+                </li>
+               </ul>
+           </div>
         </div>
     </nav>
     <div class="container card mt-4">
