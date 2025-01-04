@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contado Interativo com Teclado</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    <h2 id="contador">0</h2>
+    <button onclick="adicionar()">+</button>
+    <button onclick="retirar()">-</button>
+
+    <script>
+        let valor = 0;
+
+        function atualizarContador() {
+            document.getElementById("contador").innerText = valor;
+        }
+
+        function adicionar() {
+            valor++; //valor = valor + 1;
+            atualizarContador();
+        }
+
+        function retirar() {
+            valor--; //valor = valor - 1;
+            atualizarContador();
+        }
+
+        //Evento do teclado
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "ArrowUp") {
+                adicionar();
+            } else if (event.key === "ArrowDown") {
+                retirar();
+            }
+        });
+    </script>
+</body>
+</html>

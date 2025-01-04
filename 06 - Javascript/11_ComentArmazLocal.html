@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenamento Local</title>
+</head>
+<body>
+    <h1>Lista de Comentarios</h1>
+    <input type="text" id="comentario" placeholder="Adicione um Comentário">
+    <button onclick="adicionarComentario()">Adicionar</button>
+    <ul id="lista"></ul>
+
+    <script>
+        const lista = document.getElementById("lista");
+        const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+        function atualizarLista() {
+            lista.innerHTML = "";
+            comentarios.forEach((comentario, index) => {
+                const item = document.createElement("li");
+                item.innerText = comentario;
+                item.onclick = () => removerComentario(index);
+                lista.appendChild(item);
+            });
+        }
+
+        function adicionarComentario() {
+            const comentarioInput = document.getElementById("comentario");
+            const novoComentario = comentarioInput.value.trim();
+            if (novoComentario) {
+                comentarios.push(novoComentario);
+                localStorage.setItem("comentarios", JSON.stringify(comentarios));
+                comentarioInput.value = "";
+                atualizarLista();
+            }
+        }
+
+        function removerComentario(index) {
+            comentarios.splice(index, 1);
+            localStorage.setItem("comentarios", JSON.stringify(comentarios));
+            atualizarLista();
+        }
+
+        atualizarLista();
+    </script>
+</body>
+</html>

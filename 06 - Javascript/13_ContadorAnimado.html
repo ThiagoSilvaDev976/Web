@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Animado</title>
+</head>
+<body>
+    <h1>Contador Animado</h1>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <button onclick="incrementar()">+</button>
+    <button onclick="decrementar()">-</button>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        let valor = 0;
+
+        function desenhar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpa o canvas
+            ctx.font = "48px Arial";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "blue";
+            ctx.fillText(valor, canvas.width / 2, canvas.height / 2);
+        }
+
+        function incrementar() {
+            valor++;
+            desenhar();
+        }
+
+        function decrementar() {
+            valor--;
+            desenhar();
+        }
+
+        desenhar();
+    </script>
+</body>
+</html>

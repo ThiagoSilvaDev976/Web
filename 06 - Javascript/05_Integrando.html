@@ -1,0 +1,35 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Integração</title>
+</head>
+<body>
+    <h1 id="titulo">[título oculto]</h1>
+    <button onclick="revelar()">Revelar Título</button>
+    <button onclick="msg()">Mensagem de Alerta</button>
+    <h1 id="texto">Constante via Prompt</h1>
+    <button onclick="usuario()">Inserir Constante</button>
+    <h1>Mudando a Cor do Background</h1>
+    <button onclick="mudarCor('red')">Vermelho</button>
+    <button onclick="mudarCor('cyan')">Ciano</button>
+    <button onclick="mudarCor('yellow')">Amarelo</button>
+
+    <script>
+        function revelar(){
+            document.getElementById("titulo").innerText = "Atividade de Integração";
+        }
+        function msg(){
+            alert("Cuidado você está dando Asas a Cobra");
+        }
+        function usuario(){
+            const nome = prompt("Quem deu Asas a Cobra ?");
+            if(nome){
+                document.getElementById("texto").innerText = `Você, ${nome}, acabou de dar Asas a Cobra`;
+            }
+        }
+        function mudarCor(cor){
+            document.body.style.backgroundColor = cor;
+        }
+    </script>
+</body>

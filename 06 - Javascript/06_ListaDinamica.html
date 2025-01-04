@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Dinâmica</title>
+</head>
+<body>
+    <h1>Comentários</h1>
+    <input type="text" id="novoComentario" placeholder="Adicione um Comentário">
+    <button onclick="comentar()">Adicionar</button>
+    <ul id="lista"></ul>
+
+    <script>
+        function comentar() {
+            const input = document.getElementById("novoComentario");
+            const texto = input.value;
+
+            if (texto.trim() !== "") {
+                const lista = document.getElementById("lista");
+
+                // Criar novo comentário
+                const novoComentario = document.createElement("li");
+                novoComentario.innerText = texto;
+
+                // Adiciona o comentário à lista
+                lista.appendChild(novoComentario);
+
+                // Limpa o campo de entrada
+                input.value = "";
+            } else {
+                alert("Adicione um Comentário válido!");
+            }
+        }
+    </script>
+</body>
+</html>

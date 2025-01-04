@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar uma classe CSS</title>
+    <style>
+        .destacado {
+            font-size: 50px;
+            color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="texto">[texto para alterar]</h1>
+    <button onclick="adicionarEstilo()">Adicionar Estilo</button>
+    <button onclick="removerEstilo()">Remover Estilo</button>
+
+    <script>
+        function adicionarEstilo() {
+            const texto = document.getElementById("texto");
+            texto.classList.add("destacado");
+        }
+
+        function removerEstilo() {
+            const texto = document.getElementById("texto");
+            texto.classList.remove("destacado");
+        }
+    </script>
+</body>
+</html>
