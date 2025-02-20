@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Arrays</title>
+    <!--Neste exemplo, vamos criar um sistema simples de filtro e transformação de uma lista de objetos.-->
+</head>
+<body>
+    <h1>Filtrar Usuários</h1>
+    <ul id="listaUsuarios"></ul>
+    <button onclick="mostrarApenasAtivos()">Mostrar Apenas Ativos</button>
+
+    <script>
+        const usuarios = [
+            { id: 1, nome: "Alice", ativo: true },
+            { id: 2, nome: "Bob", ativo: false },
+            { id: 3, nome: "Charlie", ativo: true },
+            { id: 4, nome: "Diana", ativo: false },
+        ];
+
+        function atualizarLista(filtrados) {
+            const lista = document.getElementById("listaUsuarios");
+            lista.innerHTML = "";
+
+            filtrados.forEach(usuario => {
+                const item = document.createElement("li");
+                item.innerText = usuario.nome;
+                lista.appendChild(item);
+            });
+        }
+
+        function mostrarApenasAtivos() {
+            const ativos = usuarios.filter(usuario => usuario.ativo);
+            atualizarLista(ativos);
+        }
+
+        // Mostra todos os usuários inicialmente
+        atualizarLista(usuarios);
+    </script>
+</body>
+</html>

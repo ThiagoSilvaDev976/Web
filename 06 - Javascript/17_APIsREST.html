@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API com Filtro</title>
+    <!--Neste exemplo, vamos buscar posts de uma API pública e permitir que o usuário filtre por título.-->
+</head>
+<body>
+    <h1>Posts</h1>
+    <input type="text" id="filtro" placeholder="Filtrar por título" oninput="filtrarPosts()">
+    <ul id="posts"></ul>
+
+    <script>
+        let todosOsPosts = [];
+
+        async function carregarPosts() {
+            const resposta = await fetch("https://jsonplaceholder.typicode.com/posts");
+            todosOsPosts = await resposta.json();
+            atualizarLista(todosOsPosts);
+        }
+
+        function atualizarLista(posts) {
+            const lista = document.getElementById("posts");
+            lista.innerHTML = "";
+
+            posts.forEach(post => {
+                const item = document.createElement("li");
+                item.innerText = post.title;
+                lista.appendChild(item);
+            });
+        }
+
+        function filtrarPosts() {
+            const filtro = document.getElementById("filtro").value.toLowerCase();
+            const filtrados = todosOsPosts.filter(post => post.title.toLowerCase().includes(filtro));
+            atualizarLista(filtrados);
+        }
+
+        carregarPosts();
+    </script>
+</body>
+</html>

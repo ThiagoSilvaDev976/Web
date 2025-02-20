@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises e Async/Await</title>
+    <!--Neste exemplo, vamos simular uma requisição a um servidor que demora alguns segundos para responder.-->
+</head>
+<body>
+    <h1>Carregar Dados</h1>
+    <button onclick="carregarDados()">Carregar</button>
+    <p id="resultado">Clique no botão para buscar os dados.</p>
+
+    <script>
+        function buscarDadosSimulados() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Dados carregados com sucesso!");
+                }, 3000); // Simula um atraso de 3 segundos
+            });
+        }
+
+        async function carregarDados() {
+            const resultadoElemento = document.getElementById("resultado");
+            resultadoElemento.innerText = "Carregando...";
+
+            try {
+                const dados = await buscarDadosSimulados();
+                resultadoElemento.innerText = dados;
+            } catch (erro) {
+                resultadoElemento.innerText = "Erro ao carregar os dados.";
+            }
+        }
+    </script>
+</body>
+</html>
